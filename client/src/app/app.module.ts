@@ -17,6 +17,8 @@ import { RegisterComponent } from './components/register.component';
 import {TokenStorageService} from "./_services/token-storage.service";
 import { authInterceptorProviders} from "./_services/auth.service";
 import { ErrorpageComponent } from './_error/errorpage/errorpage.component';
+import { AgmCoreModule } from '@agm/core';
+import { ContactusComponent } from './components/contactus.component';
 
 
 const appRoutes: Routes = [
@@ -26,6 +28,7 @@ const appRoutes: Routes = [
   {path: 'tokens', component:TokensComponent},
   {path: 'transaction', component:TxnComponent},
   {path: 'register', component:RegisterComponent},
+  {path: `contactus`, component:ContactusComponent},
   {path: `error`, component:ErrorpageComponent},
   {path: '**', redirectTo:'error', pathMatch:'full'}
 
@@ -41,7 +44,8 @@ const appRoutes: Routes = [
     TokensComponent,
     TxnComponent,
     RegisterComponent,
-    ErrorpageComponent
+    ErrorpageComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,10 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAiFgIwLrEr3kPhxEeuNn5FnRsMGLUsS7g'
+    })
   ],
   exports:[RouterModule],
   providers: [TraderService, TokenStorageService, authInterceptorProviders],

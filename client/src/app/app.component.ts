@@ -10,8 +10,6 @@ import { TokenStorageService } from './_services/token-storage.service';
 export class AppComponent implements OnInit, OnDestroy {
 
 
-  isLoggedin : boolean = false;
-
   constructor(private router:Router, private tokenSvc : TokenStorageService){}
 
 

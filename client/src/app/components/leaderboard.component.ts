@@ -19,8 +19,7 @@ export class LeaderboardComponent implements OnInit {
       .subscribe(data => {
         this.leaderboards = data
       })
-    console.log('User  >>>', this.tokenSvc.getUser())
-    console.log('Token  >>>', this.tokenSvc.getToken())
+
 
   }
 

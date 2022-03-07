@@ -5,7 +5,6 @@
 /Users/zhenhong/Documents/SoftwareEngineering(NUS)/Final Assessment/papertradingapp-server/src/main/java/com/zenapp/papertrading/repository/UserRepo.java
 /Users/zhenhong/Documents/SoftwareEngineering(NUS)/Final Assessment/papertradingapp-server/src/main/java/com/zenapp/papertrading/models/User.java
 /Users/zhenhong/Documents/SoftwareEngineering(NUS)/Final Assessment/papertradingapp-server/src/main/java/com/zenapp/papertrading/services/CoinAPIService.java
-/Users/zhenhong/Documents/SoftwareEngineering(NUS)/Final Assessment/papertradingapp-server/src/main/java/com/zenapp/papertrading/controllers/SecureAssetsRestController.java
 /Users/zhenhong/Documents/SoftwareEngineering(NUS)/Final Assessment/papertradingapp-server/src/main/java/com/zenapp/papertrading/models/Asset.java
 /Users/zhenhong/Documents/SoftwareEngineering(NUS)/Final Assessment/papertradingapp-server/src/main/java/com/zenapp/papertrading/PapertradingApplication.java
 /Users/zhenhong/Documents/SoftwareEngineering(NUS)/Final Assessment/papertradingapp-server/src/main/java/com/zenapp/papertrading/controllers/AuthenticateRestController.java

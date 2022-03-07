@@ -10,10 +10,11 @@
         <a class="nav-item nav-link" [routerLink]="['/myportfolio']"> My Portfolio </a>
         <a class="nav-item nav-link" [routerLink]="['/tokens']">Buy Token </a>
         <a class="nav-item nav-link" [routerLink]="['/leaderboard']"> Leaderboard </a>
+        <a class="nav-item nav-link" [routerLink]="['/contactus']"> Contact Us </a>
       </div>
     </div>
     <div>
-      <button type="button" (click)="logout()" [hidden]="isLoggedin"> Log Out</button>
+      <button type="button" (click)="logout()" > Log Out</button>
     </div>
   </nav>
 </div>
@@ -23,5 +24,5 @@
   <router-outlet></router-outlet>
 </div>
 
-<hr>
+
 
