@@ -42,9 +42,14 @@ export class LoginComponent implements OnInit {
         console.log(response)
         this.tokenSvc.saveToken(response['token'])
         this.tokenSvc.saveUser(response['subject'])
+        this.router.navigate(['/myportfolio'])
 
+      }, err => {
+        console.log('HTTP Error', err);
+        alert('Incorrect username or password. Please try again.');
+        this.router.navigate(['']);
       })
-    this.router.navigate(['/myportfolio'])
+
   }
 
 }

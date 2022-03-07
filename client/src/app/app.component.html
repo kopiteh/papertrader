@@ -12,6 +12,9 @@
         <a class="nav-item nav-link" [routerLink]="['/leaderboard']"> Leaderboard </a>
       </div>
     </div>
+    <div>
+      <button type="button" (click)="logout()" [hidden]="isLoggedin"> Log Out</button>
+    </div>
   </nav>
 </div>
 <hr>

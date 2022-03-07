@@ -10,7 +10,6 @@ export class AuthInterceptor implements HttpInterceptor {
 
     const idToken = window.sessionStorage.getItem("token");
     const subject = window.sessionStorage.getItem("subject");
-    console.log('Checking if auth.service is getting the right token', idToken)
 
     if (idToken && subject) {
       const cloned = req.clone({

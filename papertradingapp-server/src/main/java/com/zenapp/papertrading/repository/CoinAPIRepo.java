@@ -73,7 +73,7 @@ public class CoinAPIRepo {
 
     }
 
-    // Retrieve balance to see if buy order can proceed.
+    // Retrieve balance to see if BUY order can proceed.
     public float checkBalance(String username){
 
         float balance;
@@ -92,7 +92,7 @@ public class CoinAPIRepo {
 
         return added > 0;
     }
-    // Add BUY tranasction
+    // Add SELL tranasction
     public boolean addSellOrder (final TxnOrder to, String username){
         int added = template.update(
                 "INSERT INTO transactions (asset_id, quantity, price_usd, fk_username) VALUES (?,?,?,?)",
@@ -101,6 +101,7 @@ public class CoinAPIRepo {
 
         return added > 0;
     }
+
     // Update user balance after each transaction
     public boolean updateUserBalance(final TxnOrder to, String username){
         int added = template.update(

@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {TraderService} from "../trader.service";
 import {newUser} from "../models";
 import {Router} from "@angular/router";
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-register',
@@ -31,6 +32,7 @@ export class RegisterComponent implements OnInit {
   register(){
     const newUser = this.regForm.value as newUser;
     this.traderSvc.registerUser(newUser)
+      .pipe(catchError(async (err) => alert('Account cannot be registered. Please try again other username or email.')))
       .subscribe(response=> {
         console.log(response)
       })

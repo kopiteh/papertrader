@@ -9,7 +9,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   templateUrl: './myportfolio.component.html',
   styleUrls: ['./myportfolio.component.scss']
 })
-export class MyportfolioComponent implements OnInit,AfterViewInit {
+export class MyportfolioComponent implements OnInit {
 
   myPortfolios!: MyPortfolio[];
   total_value!: number;
@@ -31,9 +31,6 @@ export class MyportfolioComponent implements OnInit,AfterViewInit {
       })
   }
 
-  ngAfterViewInit() {
-    this.mpf_total_value();
-  }
 
   createform() {
     this.sellForm = this.fb.group({
@@ -59,11 +56,5 @@ export class MyportfolioComponent implements OnInit,AfterViewInit {
     window.location.reload();
   }
 
-  mpf_total_value(){
-    let total_value : number = 0;
 
-    for (let x of this.myPortfolios){
-      total_value = total_value + x.value;
-    }
-  }
 }
