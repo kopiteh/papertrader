@@ -26,6 +26,7 @@ public class AuthenticateService {
 
     @PostConstruct
 	public void init() {
+        //Passphrase should be encrypted. 
 		String passphrase = "TEST1234TEST1234TEST1234TEST1234TEST1234TEST1234TEST1234TEST1234TEST1234TEST1234TEST1234";
 
 		try {
